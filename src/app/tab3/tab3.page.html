@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Tab Three
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let filme of lista_filmes" >
+    <ion-card-header>
+      <ion-card-subtitle></ion-card-subtitle>
+      <ion-card-title>{{filme.original_title}}</ion-card-title>
+      <p>{{filme.release_date}}</p>
+      <img [src]="'https://image.tmdb.org/t/p/w300/' + filme.backdrop_path">
+    </ion-card-header>
+  
+    <ion-card-content>
+      <p>{{filme.overview}}</p>
+    </ion-card-content>
+    <ion-item>
+    </ion-item>
+  </ion-card>
+  
+</ion-content>
