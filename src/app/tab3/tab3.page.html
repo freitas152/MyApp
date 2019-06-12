@@ -7,7 +7,7 @@
 </ion-header>
 
 <ion-content>
-  <ion-card *ngFor="let filme of lista_filmes" >
+  <ion-card *ngFor="let filme of lista_filmes" (click) = "MostrarDetalhes()" >
     <ion-card-header>
       <ion-card-subtitle></ion-card-subtitle>
       <ion-card-title>{{filme.original_title}}</ion-card-title>

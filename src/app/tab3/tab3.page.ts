@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { MovieDetailPage } from './../movie-detail/movie-detail.page';
+import { Component, ViewChild } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { ProviderService } from './../provider.service';
 import { Http } from '@angular/http';
@@ -26,5 +27,14 @@ export class Tab3Page {
       }
     )
   }
-
+  MostrarDetalhes(){
+    console.log("Enxeganndo metado")
+    this.navCtrl.push(MovieDetailPage, {
+    });
+  }
+    
 }
+   
+    
+ 
+

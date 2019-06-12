@@ -17,6 +17,9 @@ export class ProviderService {
    public getLatestMovie(){
     return this.getMovie("Latest");
   }
+  public getMovieDetail(idFilmes : string){
+    return this.getMovie(idFilmes);
+  }
    public getMovie(url : string){
     return this.http.get(this.baseURL + url + this.getApiKey());
    }
