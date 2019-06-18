@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, ActivatedRoute } from '@angular/router';
 
-import { IonicModule } from '@ionic/angular';
+
+import { IonicModule, NavController } from '@ionic/angular';
 
 import { MovieDetailPage } from './movie-detail.page';
 
@@ -23,4 +24,6 @@ const routes: Routes = [
   ],
   declarations: [MovieDetailPage]
 })
-export class MovieDetailPageModule {}
+export class MovieDetailPageModule {
+ 
+}

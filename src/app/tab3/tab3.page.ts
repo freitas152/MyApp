@@ -3,6 +3,7 @@ import { Component, ViewChild } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { ProviderService } from './../provider.service';
 import { Http } from '@angular/http';
+import { NavigationExtras } from '@angular/router';
 
 @Component({
   selector: 'app-tab3',
@@ -27,14 +28,14 @@ export class Tab3Page {
       }
     )
   }
-  MostrarDetalhes(){
-    console.log("Enxeganndo metado")
-    this.navCtrl.push(MovieDetailPage, {
-    });
-  }
-    
-}
-   
-    
- 
+  MostrarDetalhes(filme){
+   // this.navCtrl.(MovieDetailPage);
+    console.log("Enxeganndo metado");
+  
 
+      let param: NavigationExtras = {
+        queryParams:{ id:filme.id,title:filme.title}
+      };
+      this.navCtrl.navigateForward(["movie-detail"],param); 
+  }
+}
